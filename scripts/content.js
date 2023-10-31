@@ -97,14 +97,15 @@ async function extractMarkdown() {
   const detailsLink = detailsLinks[detailsLinks.length - 1];
   detailsLink.click();
 
-  await sleep(300);
+  await sleep(400);
 
   const newButton = [...document.querySelectorAll(".phui-list-item-href")].find(
     (t) => t.textContent === "New"
   );
   newButton.click();
 
-  const text = document.querySelector("#UQ7_1 > div > div").textContent;
+  await sleep(100);
+  const text = document.querySelector(".prose-diff").textContent;
 
   const doneButton = document.querySelector(
     "body > div.jx-client-dialog > form > div.aphront-dialog-tail.grouped > a"
