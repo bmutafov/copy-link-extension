@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Phabricator !wadd",
+  "description": "Adds a button to Phabricator to add a !wadd comment to clipboard",
+  "version": "1.0",
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["https://code.uberinternal.com/D*"]
+    }
+  ]
+}
